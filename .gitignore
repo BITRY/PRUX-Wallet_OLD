@@ -1,0 +1,34 @@
+src/*.exe
+src/prux
+src/prux
+src/test_prux
+.*.swp
+*.*~*
+*.bak
+*.rej
+*.orig
+*.o
+*.patch
+.prux
+
+# Compilation and Qt preprocessor part
+*.qm
+Makefile
+prux-qt
+prux.app
+
+# Unit-tests
+Makefile.test
+prux-qt_test
+
+# Resources cpp
+qrc_*.cpp
+
+# Qt creator
+*.pro.user
+
+# Mac specific
+.DS_Store
+build
+
+!src/leveldb-*/Makefile
