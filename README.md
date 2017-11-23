@@ -17,6 +17,11 @@ Mined Block Confirmation : 274
 Premine = ZERO
 
 
+::::::::::::::::::::::::::::::::::::::::::::::::BUILD WALLET INSTRUCTION::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+LINUX / UBUNTU 14.04 BUILD READ FILE HERE -------->>>>  /prux/doc/build-unix.txt
+
 
 POOL LIST 
 https://yiimp.mastermining.net/site/mining
