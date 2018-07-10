@@ -22,6 +22,18 @@ Premine = ZERO
 
 LINUX / UBUNTU 14.04 BUILD READ FILE HERE -------->>>>  /prux/doc/build-unix.txt
 
+make a file named prux.conf  in your   ./prux folder  
+Example for prux.conf :  
+
+server=1
+daemon=1
+rpcuser=yourchoicerpcuser
+rpcpassword=yourchoicepassword
+rpcport=8933
+port=9595
+maxconnections=25
+addnode=80.218.217.199:9595
+
 
 POOL LIST 
 https://yiimp.mastermining.net/site/mining
