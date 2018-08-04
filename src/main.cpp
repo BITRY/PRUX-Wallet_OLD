@@ -883,7 +883,7 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
 if(pindexLast->nHeight >= 7375107)
 {
     nTargetTimespan = 5 * 60 * 60; // 5 hours
-    nTargetSpacing = 9; // 1.5 minutes
+    nTargetSpacing = 9; // 9 sec
     nInterval = nTargetTimespan / nTargetSpacing;
     nReTargetHistoryFact = 6;
 }
