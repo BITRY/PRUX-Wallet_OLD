@@ -836,13 +836,13 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + (1.9595*nFees);
 }
 
-static const int64 nTargetTimespan = 60 * 6; // prux:
-static const int64 nTargetSpacing = 3; // prux:
-static const int64 nInterval = nTargetTimespan / nTargetSpacing;
+static int64 nTargetTimespan = 60 * 6; // prux:
+static int64 nTargetSpacing = 3; // prux:
+static int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 // Thanks: Balthazar for suggesting the following fix
 // https://bitcointalk.org/index.php?topic=182430.msg1904506#msg1904506
-static const int64 nReTargetHistoryFact = 2; // look at 4 times the retarget
+static int64 nReTargetHistoryFact = 2; // look at 4 times the retarget
                                              // interval into the block history
 
 //
@@ -877,7 +877,23 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     // Genesis block
     if (pindexLast == NULL)
         return nProofOfWorkLimit;
-
+ 
+// From block 28000 reassess the difficulty every 40 blocks
+// Retarget factor to 6
+if(pindexLast->nHeight >= 7331700)
+{
+    nTargetTimespan = 5 * 60 * 60; // 5 hours
+    nTargetSpacing = 9; // 1.5 minutes
+    nInterval = nTargetTimespan / nTargetSpacing;
+    nReTargetHistoryFact = 6;
+}
+else
+{
+    nTargetTimespan = 60 * 6; // prux:
+    nTargetSpacing = 3; // prux:
+    nInterval = nTargetTimespan / nTargetSpacing;
+    nReTargetHistoryFact = 2;
+}
     // Only change once per interval
     if ((pindexLast->nHeight+1) % nInterval != 0)
     {
