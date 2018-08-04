@@ -10,8 +10,6 @@ Block Time : 9sec
 
 Miner Reward : 0.00959499 PRUX
 
-ULTF (Ultra Low TX Fee) : 0.00000005 PRUX
-
 Mined Block Confirmation : 274
 
 Premine = ZERO
