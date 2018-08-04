@@ -6,7 +6,7 @@ Hash Algorithm : Scrypt
 
 Typ : Proof-of-Work
 
-Block Time : 3sec
+Block Time : 9sec
 
 Miner Reward : 0.00959499 PRUX
 
