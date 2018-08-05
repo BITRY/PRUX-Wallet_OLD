@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2010 Satoshi Nakamoto
+new rule 9 sec blocktraget// Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2012 Litecoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
@@ -878,9 +878,9 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     if (pindexLast == NULL)
         return nProofOfWorkLimit;
  
-// From block 28000 reassess the difficulty every 40 blocks
+// From block 7331700 reassess the difficulty every 40 blocks
 // Retarget factor to 6
-if(pindexLast->nHeight >= 7331700)
+if(pindexLast->nHeight >= )
 {
     nTargetTimespan = 5 * 60 * 60; // 5 hours
     nTargetSpacing = 9; // 9 sec
