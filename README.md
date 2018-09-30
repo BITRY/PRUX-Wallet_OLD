@@ -30,13 +30,6 @@ EXCHANGES
 https://tradesatoshi.com/Exchange/?market=PRUX_BTC 
 
 
-BUILD STATUS
-============
-[![Build Status](https://*************.png?branch=master)](https:/***********/prux)
-
-
-
-
 
 UBUNTU 14.04 BUILD NOTES
 ========================
