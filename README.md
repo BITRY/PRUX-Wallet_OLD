@@ -3,10 +3,15 @@ PRUX COIN INFORMATION
 ===================== 
 
 Hash Algorithm : Scrypt
+
 Typ : Proof-of-Work
+
 Block Time : 9sec
+
 Miner Reward : 0.00959499 PRUX
+
 Mined Block Confirmation : 274
+
 Premine = ZERO
 
 
