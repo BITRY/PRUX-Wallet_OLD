@@ -10,6 +10,10 @@ Block Time : 9sec
 
 Miner Reward : 0.00959499 PRUX
 
+Actual Reward : 0.004797495 PRUX
+
+Difficulty Retarget : 5 - 12 Hours
+
 Mined Block Confirmation : 274
 
 Premine = ZERO
@@ -79,10 +83,22 @@ again
 
 
 Running
-=====
+=======
 
 ./prux-qt -addnode=80.218.217.199:9595
 
 or
 
 src/./prux -addnode=80.218.217.199:9595
+
+
+NODES
+=====
+
+addnode=80.218.217.199
+addnode=50.225.198.67
+addnode=62.109.27.153
+addnode=78.46.18.218
+addnode=78.154.170.70
+addnode=50.232.104.35
+addnode=109.195.103.14
