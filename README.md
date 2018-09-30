@@ -22,8 +22,7 @@ LINUX / UBUNTU 14.04 BUILD READ FILE HERE -------->>>>  /prux/doc/build-unix.txt
 
 POOL LIST
 =========
-https://yiimp.mastermining.net/site/mining
-http://www.bitcoin-pool.de
+https://prux.mastermining.net/site/mining
 
 
 EXCHANGES
