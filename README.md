@@ -43,30 +43,46 @@ UBUNTU 14.04 BUILD NOTES
 ========================
 
 sudo add-apt-repository ppa:bitcoin/bitcoin
+
 sudo apt-get update
+
 sudo apt-get install qt4-dev-tools libqt4-dev libqt4-core libqt4-gui
+
 sudo apt-get install build-essential
+
 sudo apt-get install libssl-dev
+
 sudo apt-get install libdb4.8-dev if not work try sudo apt-get install libdb-dev
+
 sudo apt-get install libdb4.8++-dev  if not work try sudo apt-get install libdb++-dev
+
 sudo apt-get install libqrencode-dev
+
 sudo apt-get install libboost1.48-dev   if not work try  sudo apt-get install libboost-dev
+
 sudo apt-get install libboost1.48-all-dev  if not work try  sudo apt-get install libboost-all-dev
+
 
 BUILD
 =====
 
 cd PRUX-COIN-master
+
 qmake "USE_UPNP=-"
+
 make                        (or  make -j2  , 2 core or the fast way or turbo with -j8)
 
 cd src
+
 make -f  makefile.unix USE_UPNP=-      (or -j2  ,the fast way or turbo with -j8)
 
 
 if error can help
+
 cd src
+
 chmod +x leveldb/build_detect_platform
+
 again
 
 
@@ -78,10 +94,3 @@ Running
 or
 
 src/./prux -addnode=80.218.217.199:9595
-
-
-
-
-
-
-
