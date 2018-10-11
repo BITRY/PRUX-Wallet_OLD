@@ -880,12 +880,12 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
  
 // From block 7331700 reassess the difficulty every 40 blocks
 // Retarget factor to 6
-if(pindexLast->nHeight >= 8030000)
+if(pindexLast->nHeight >= 7770000)
 {
-    nTargetTimespan = 60 * 60; // 5 hours
+    nTargetTimespan = 15 * 60; // 900sec = 100 Blocks = all 15 Minutes or all 100 Blocks diff Retarget 
     nTargetSpacing = 9; // 9 sec
     nInterval = nTargetTimespan / nTargetSpacing;
-    nReTargetHistoryFact = 2;
+    nReTargetHistoryFact = 2;  
 }
 else if(pindexLast->nHeight >= 7331700)
 {
