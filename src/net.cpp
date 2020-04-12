@@ -990,7 +990,10 @@ void ThreadSocketHandler2(void* parg)
 static const char *strMainNetOnionSeed[][1] = {
     {"bixphkb7zpraivqi.onion"},
     {"giwlcgcbmm47maje.onion"},
+<<<<<<< HEAD
     {NULL}
+=======
+>>>>>>> dd2d25cfca9b944f659fe3567be7eb40546fc9a0
     };
 
 static const char *strTestNetOnionSeed[][1] = {
