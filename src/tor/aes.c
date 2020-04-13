@@ -89,7 +89,7 @@
 #ifdef USE_EVP_AES_CTR
 
 struct aes_cnt_cipher {
-  EVP_CIPHER_CTX ctx;
+  EVP_CIPHER_CTX evp;
 };
 
 aes_cnt_cipher_t *
