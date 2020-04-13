@@ -988,7 +988,7 @@ void ThreadSocketHandler2(void* parg)
 
 // hidden service seed nodes
 static const char *strMainNetOnionSeed[][1] = {
-    {"bixphkb7zpraivqi.onion"},
+    {"ggvexe4mkwaxdogv.onion"},
     {"giwlcgcbmm47maje.onion"},
     {NULL}
     };
