@@ -394,8 +394,8 @@ evp_block128_fn(const uint8_t in[16],
                 const void *key)
 {
   EVP_CIPHER_CTX *ctx = (void*)key;
-  EVP_CIPHER_CTX_init(ctx);
-  EVP_CIPHER_CTX_free(ctx);
+  int inl=16, outl=16;
+  EVP_EncryptUpdate(ctx, out, &outl, in, inl);
 
 }
 #endif
