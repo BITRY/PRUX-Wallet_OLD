@@ -2617,10 +2617,10 @@ base64_encode(char *dest, size_t destlen, const char *src, size_t srclen)
   if (destlen > SIZE_T_CEILING)
     return -1;
 
-  EVP_EncodeInit(&ctx);
-  EVP_EncodeUpdate(&ctx, (unsigned char*)dest, &len,
+  EVP_EncodeInit(ctx);
+  EVP_EncodeUpdate(ctx, (unsigned char*)dest, &len,
                    (unsigned char*)src, (int)srclen);
-  EVP_EncodeFinal(&ctx, (unsigned char*)(dest+len), &ret);
+  EVP_EncodeFinal(ctx, (unsigned char*)(dest+len), &ret);
   ret += len;
   return ret;
 }
@@ -2680,10 +2680,10 @@ base64_decode(char *dest, size_t destlen, const char *src, size_t srclen)
   if (destlen > SIZE_T_CEILING)
     return -1;
 
-  EVP_DecodeInit(&ctx);
-  EVP_DecodeUpdate(&ctx, (unsigned char*)dest, &len,
+  EVP_DecodeInit(ctx);
+  EVP_DecodeUpdate(ctx, (unsigned char*)dest, &len,
                    (unsigned char*)src, srclen);
-  EVP_DecodeFinal(&ctx, (unsigned char*)dest, &ret);
+  EVP_DecodeFinal(ctx, (unsigned char*)dest, &ret);
   ret += len;
   return ret;
 #else
