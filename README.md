@@ -22,13 +22,21 @@ information or see https://opensource.org/licenses/MIT.
 PRUX COIN INFORMATION
 ---------------------
 Hash Algorithm : Scrypt
+
 Typ : Proof-of-Work
+
 Block Time : 9sec
+
 Miner Reward : 0.00959499 PRUX
+
 Actual Reward : 0.004797495 PRUX
+
 Difficulty Retarget : 5 - 12 Hours
+
 Mined Block Confirmation : 274
+
 Total Supply : After 90 Years only ~104k 
+
 Premine = ZERO
 
 
@@ -42,6 +50,7 @@ The contribution workflow is described in official BT-Thread
 NEXT STEPS
 ----------
 -more user
+
 -more exchanges
 
 
