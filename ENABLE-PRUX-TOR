@@ -1,0 +1,9 @@
+Start PRUX-Wallet with Tor 
+-------------
+
+
+-torconnect=1
+
+Exp:
+
+./prux -server -torconnect=1
