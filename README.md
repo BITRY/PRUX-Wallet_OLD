@@ -57,7 +57,7 @@ https://prux.mastermining.net/site/mining
 
 EXCHANGES
 ---------
-https://tradesatoshi.com/Exchange/?market=PRUX_BTC 
+https://ex.xbts.io/#/market/XBTSX.PRUX_BTS
 
 
 UBUNTU 14.04 BUILD NOTES
