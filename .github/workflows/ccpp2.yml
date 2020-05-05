@@ -20,6 +20,3 @@ jobs:
           
       - name: make
         run: cd src/ && make -j4 -f makefile.unix USE_UPNP=- 
-     
-      - name: make distcheck
-        run: make distcheck
