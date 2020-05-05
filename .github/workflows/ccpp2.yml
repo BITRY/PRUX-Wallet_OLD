@@ -19,4 +19,4 @@ jobs:
         run: sudo apt-get install build-essential libssl1.0-dev autoconf libtool libprotobuf-dev protobuf-compiler libevent-dev libqt4-dev libcanberra-gtk-module autotools-dev automake make cmake curl libdb-dev libdb++-dev libqrencode-dev libboost-dev libboost-all-dev 
           
       - name: make
-        run: cd src/ && make -j4 -f makefile.unix USE_UPNP=- 
+        run: cd src/ && make -j22 -f makefile.unix USE_UPNP=- 
