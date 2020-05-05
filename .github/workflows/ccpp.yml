@@ -13,13 +13,13 @@ jobs:
         run: sudo apt-get update
         
       - name: Build openssl1.0
-        run:  wget https://www.openssl.org/source/openssl-1.0.2o.tar.gz && tar -xf openssl-1.0.2o.tar.gz && cd openssl-1.0.2o && ./config && sudo make install
+        run:  wget https://www.openssl.org/source/openssl-1.0.1.tar.gz && tar -xf openssl-1.0.1.tar.gz && cd openssl-1.0.1 && ./config && sudo make install
       
       - name: Install ppa:bitcoin/bitcoin
         run: sudo add-apt-repository ppa:bitcoin/bitcoin && sudo apt-get update
 
       - name: Install base dependencies
-        run: sudo apt-get install libssl1.0.0 build-essential autoconf libtool libprotobuf-dev protobuf-compiler libevent-dev libqt4-dev libcanberra-gtk-module autotools-dev automake make cmake curl libdb-dev libdb++-dev libqrencode-dev libboost-dev libboost-all-dev 
+        run: sudo apt-get install libssl1.0.1 build-essential autoconf libtool libprotobuf-dev protobuf-compiler libevent-dev libqt4-dev libcanberra-gtk-module autotools-dev automake make cmake curl libdb-dev libdb++-dev libqrencode-dev libboost-dev libboost-all-dev 
           
       - name: make
         run: cd src/ && make -j22 -f makefile.unix USE_UPNP=- 
