@@ -28,4 +28,4 @@ jobs:
         run: make check -j4
 
       - name: make distcheck
-run: make distcheck
+        run: make distcheck
