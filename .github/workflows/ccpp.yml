@@ -13,16 +13,19 @@ jobs:
         run: sudo apt-get update
         
       - name: Install Bitcoin PPA 
+        run: sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com DFA2F90D && sudo apt-get update
+    
+      - name: Install openssl key
         run: sudo add-apt-repository ppa:bitcoin/bitcoin && sudo apt-get update
 
       - name: Install base dependencies
-        run: sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils libattr1-dev make automake cmake curl g++-multilib binutils-gold python3 libssl-dev libdb4.8-dev libdb4.8++-dev
-      
-      - name: Install base dependencies
-        run: sudo apt-get update && sudo apt-get install libqrencode-dev libboost-dev libboost-all-dev
+        run: sudo apt-get install libssl-dev libevent-dev build-essential libtool autotools-dev automake pkg-config make automake cmake curl libdb4.8-dev libdb4.8++-dev libqrencode-dev libboost1.48-dev libboost1.48-all-dev 
           
       - name: make
         run: cd src/ && make -j4 -f makefile.unix USE_UPNP=- 
      
       - name: make check
         run: make check -j4
+
+      - name: make distcheck
+run: make distcheck
