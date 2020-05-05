@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         
-        - name: Install base dependencies
+      - name: Install base dependencies
         run: sudo apt-cache search libssl*
 
       - name: Update apt repos
