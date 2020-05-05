@@ -54,12 +54,12 @@ class CBigNum : public BIGNUM
 public:
     CBigNum()
     {
-        BN_init(this);
+        BN_new(this);
     }
 
     CBigNum(const CBigNum& b)
     {
-        BN_init(this);
+        BN_new(this);
         if (!BN_copy(this, &b))
         {
             BN_clear_free(this);
@@ -80,21 +80,21 @@ public:
     }
 
     //CBigNum(char n) is not portable.  Use 'signed char' or 'unsigned char'.
-    CBigNum(signed char n)      { BN_init(this); if (n >= 0) setulong(n); else setint64(n); }
-    CBigNum(short n)            { BN_init(this); if (n >= 0) setulong(n); else setint64(n); }
-    CBigNum(int n)              { BN_init(this); if (n >= 0) setulong(n); else setint64(n); }
-    CBigNum(long n)             { BN_init(this); if (n >= 0) setulong(n); else setint64(n); }
-    CBigNum(int64 n)            { BN_init(this); setint64(n); }
-    CBigNum(unsigned char n)    { BN_init(this); setulong(n); }
-    CBigNum(unsigned short n)   { BN_init(this); setulong(n); }
-    CBigNum(unsigned int n)     { BN_init(this); setulong(n); }
-    CBigNum(unsigned long n)    { BN_init(this); setulong(n); }
-    CBigNum(uint64 n)           { BN_init(this); setuint64(n); }
-    explicit CBigNum(uint256 n) { BN_init(this); setuint256(n); }
+    CBigNum(signed char n)      { BN_new(this); if (n >= 0) setulong(n); else setint64(n); }
+    CBigNum(short n)            { BN_new(this); if (n >= 0) setulong(n); else setint64(n); }
+    CBigNum(int n)              { BN_new(this); if (n >= 0) setulong(n); else setint64(n); }
+    CBigNum(long n)             { BN_new(this); if (n >= 0) setulong(n); else setint64(n); }
+    CBigNum(int64 n)            { BN_new(this); setint64(n); }
+    CBigNum(unsigned char n)    { BN_new(this); setulong(n); }
+    CBigNum(unsigned short n)   { BN_new(this); setulong(n); }
+    CBigNum(unsigned int n)     { BN_new(this); setulong(n); }
+    CBigNum(unsigned long n)    { BN_new(this); setulong(n); }
+    CBigNum(uint64 n)           { BN_new(this); setuint64(n); }
+    explicit CBigNum(uint256 n) { BN_new(this); setuint256(n); }
 
     explicit CBigNum(const std::vector<unsigned char>& vch)
     {
-        BN_init(this);
+        BN_new(this);
         setvch(vch);
     }
 
@@ -177,7 +177,7 @@ public:
             n <<= 8;
             if (fLeadingZeroes)
             {
-                if (c == 0)
+                if (c == 0)BN_new
                     continue;
                 if (c & 0x80)
                     *p++ = 0;
