@@ -8,9 +8,3 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-
-      - name: Update apt repos
-        run: sudo apt-get update
-        
-      - name: Install Bitcoin PPA 
-        run: sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com DFA2F90D && sudo apt-get update
