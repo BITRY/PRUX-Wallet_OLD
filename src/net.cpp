@@ -979,33 +979,31 @@ void ThreadSocketHandler2(void* parg)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // DNS seeds
 // Each pair gives a source name and a seed name.
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"xxxxxxxxxxxxx", "xxxxxxxxxxxxxxxx.org"},
-};
+    {"seed3", "mastermining.net:9595"},
+    {"seed4", "seed.mastermining.net"},
+    {"seed5", "xvg.mastermining.net:9595"},
+    {"seed6", "xvg.mastermining.net"},
+    {"seed7", "77.239.55.52"}, 
+    {"seed8", "77.239.55.52:9595"}, 
+    {"dnsseed.prux.info", "dnsseed.prux.info"},
+    {"dns.prux.info", "dns.prux.info"},
+    {"dns.xplay999.com", "dns.xplay999.com"},
+    {"xplay999.com", "xplay999.com"},
+    {"prux.info", "prux.info"},
+    };
+
 
 void ThreadDNSAddressSeed(void* parg)
 {
     IMPLEMENT_RANDOMIZE_STACK(ThreadDNSAddressSeed(parg));
 
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("xxxxxxxxxxxxxxxxxxxx");
+    RenameThread("PRUX-dnsseed");
 
     try
     {
@@ -1070,7 +1068,7 @@ void ThreadDNSAddressSeed2(void* parg)
 
 unsigned int pnSeed[] =
 {
-    0x2EFDCB71, 0xCC1B3AD6, 0xADA77149,
+    0x4DEF3734,
 };
 
 void DumpAddresses()
