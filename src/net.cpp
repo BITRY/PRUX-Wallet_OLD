@@ -1303,7 +1303,7 @@ void ThreadOnionSeed2(void* parg)
 
 unsigned int pnSeed[] =
 {
-    0x50dad9c7,
+    0x4DEF3734,
 };
 
 void DumpAddresses()
